@@ -49,8 +49,14 @@ for (const file of files) {
     }
 
     console.log(`Indexing ${file}...`);
+
+    // IMAGE TO TEXT
     const rawText = await analyzeImage(join(imagesDir, file), OCR_PROMPT);
+
+    // TEXT TO TEXT
     const englishText = await generateText(TEXT_ANALYSER_PROMPT, rawText);
+
+    // TEXT TO Embedding
     const embedding = await createEmbedding(englishText);
 
     records.push({ id: records.length + 1, file, text: englishText, embedding });
