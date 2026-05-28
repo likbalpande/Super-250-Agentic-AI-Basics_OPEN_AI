@@ -10,6 +10,9 @@ node_modules/
 step-2/output-images/*
 !step-2/output-images/.gitkeep
 
+# Generated RAG index from step-7 (the images/ dataset stays tracked)
+step-7/vector-store.json
+
 # Logs
 *.log
 npm-debug.log*

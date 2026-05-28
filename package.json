@@ -20,7 +20,10 @@
     "step-6.2": "node step-6/2-text_to_embedding.js",
     "step-6.3": "node step-6/3-text_to_embedding.js",
     "step-6.4": "node step-6/4-text_to_embedding.js",
-    "step-6.5": "node step-6/5-text_to_embedding.js"
+    "step-6.5": "node step-6/5-text_to_embedding.js",
+    "step-7.1": "node step-7/1-index.js",
+    "step-7.2": "node step-7/2-query.js",
+    "step-7.3": "node step-7/3-ask.js"
   },
   "dependencies": {
     "openai": "^4.0.0",
