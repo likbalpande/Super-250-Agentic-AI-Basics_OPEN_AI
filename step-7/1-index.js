@@ -18,7 +18,7 @@ const IMAGE_EXTENSIONS = [".png", ".jpg", ".jpeg", ".webp"];
 const OCR_PROMPT = `
     Extract all readable text from the image. 
     Preserve the original wording and structure as closely as possible. 
-    Return plain text only with no explanations, formatting notes, or commentary.
+    Return plain text only with no explanations, no formatting notes, or no commentary.
 `;
 
 const TEXT_ANALYSER_PROMPT = `

@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createEmbedding } from "../ai/6-embedding.js";
 import { loadIndex, topK } from "./helper.js";
+import { writeFileSync } from "node:fs";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const indexPath = join(scriptDir, "vector-store.json");
@@ -17,6 +18,7 @@ if (records.length === 0) {
 }
 
 const queryEmbedding = await createEmbedding(query);
+writeFileSync(new URL("./2-query-embedding.json", import.meta.url), JSON.stringify(queryEmbedding, null, 2));
 const hits = topK(queryEmbedding, records, 3);
 
 console.log("-----------------------\n");
