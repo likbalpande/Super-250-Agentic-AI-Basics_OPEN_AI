@@ -9,4 +9,4 @@ export async function getAllProducts() {
 }
 
 export const productTools = [getAllProductsTool];
-export const productFns = { getAllProducts };
+export const productFns = { "getAllProducts" : getAllProducts };
